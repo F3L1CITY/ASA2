@@ -1,0 +1,18 @@
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	rn.asa.br. root.rn.asa.br. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	rn.asa.br.
+@	IN	NS	ns1.rn.asa.br.
+@	IN	MX	10 mail.rn.asa.br.
+@	IN	A	10.25.3.135
+
+ns1	IN	A	10.25.3.135
+mail	IN	A	10.25.3.135
+www	IN	CNAME	ns1
